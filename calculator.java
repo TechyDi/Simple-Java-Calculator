@@ -1,17 +1,17 @@
 import java.util.Scanner;
 
-public class calculator{       
+public class calculator{      
+    static int choice; 
     public static void main(String[] args){
     // Simple Calculator using JAVA
 
     float num1,num2,Result; //Taking num1 & num2 for first and seconnd number respectiely, Result for the output after the operation.
     char operator;
-    int choice;
      Scanner sc = new Scanner(System.in); //Adding scanner class for user input
 
         do{
             System.out.println("What Do You Want?");
-            System.out.println("1. Simple Calculation \n2. Squaring\n3. Exit");
+            System.out.println("1. Simple Calculation \n2. Squaring\n3. Cubing\n4. Suare-root\n5. Exit");
                 choice = sc.nextInt();
         
 
@@ -43,8 +43,12 @@ public class calculator{
                                 break;
 
                                 case '/':
-                                    Result= num1/num2;
-                                        System.out.println(Result);
+                                    if(num2!=0){
+                                        Result= num1/num2;
+                                            System.out.println(Result);
+                                    }else{
+                                        System.out.println("Division by zero is not allowed.");
+                                    }
                                 break;
                         default:
                         break;
@@ -52,14 +56,33 @@ public class calculator{
         }else if(choice==2){
                 System.out.print("Enter Your Number for Squaring:- ");
                     int sq = sc.nextInt();
-                        System.out.println("The Suare of "+sq + "is" + sq*sq);        
+                        System.out.println("The Suare of "+sq +" is "+ sq*sq);        
         }else if(choice==3){
+            System.out.print("Enter Your Number for Cubing:- ");
+                int cu = sc.nextInt();
+                    System.out.println("The Square of "+cu+" is "+(cu*cu*cu));
+        }else if(choice==4){
+            System.out.print("Enter Your Number for Square root:- ");
+                double sqr = sc.nextDouble();
+                    System.out.println("The Square-root of "+sqr+" is "+Math.sqrt(sqr));
+        }else if(choice==5){
             System.out.println("Existing From The Program.");
         }else{
             System.out.println("Invalid Input. Please Select 1, 2 or 3.");
         }
-    }while(choice !=3);
+    }while(choice !=5);
          sc.close();
 
     }
+//  public class MathExpression {
+//    public static void sqr(Scanner scanner) {
+//     Scanner sc = new Scanner(System.in); //Adding scanner class for user input
+//         if(choice==4)
+//             System.out.println("Enter the Number for Suare-root: ");
+//             double sqr = sc.nextDouble();
+//                 System.out.println("The Suare-root of "+sqr+" is "+Math.sqrt(sqr) );
+//         sc.close();
+//     }
+//  }
+
 }
