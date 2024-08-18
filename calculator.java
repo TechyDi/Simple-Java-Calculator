@@ -11,7 +11,7 @@ public class calculator{
 
         do{
             System.out.println("What Do You Want?");
-            System.out.println("1. Simple Calculation \n2. Squaring\n3. Cubing\n4. Suare-root\n5. Exit");
+            System.out.println("1. Simple Calculation \n2. Squaring\n3. Cubing\n4. Suare-root\n5. Cube-Root\n6. Exits");
                 choice = sc.nextInt();
         
 
@@ -66,11 +66,15 @@ public class calculator{
                 double sqr = sc.nextDouble();
                     System.out.println("The Square-root of "+sqr+" is "+Math.sqrt(sqr));
         }else if(choice==5){
+            System.out.print("Enter Your Number for cube root:- ");
+                double cbr = sc.nextDouble();
+                    System.out.println("The Square-root of "+cbr+" is "+Math.cbrt(cbr));
+        }else if(choice==6){
             System.out.println("Existing From The Program.");
         }else{
             System.out.println("Invalid Input. Please Select 1, 2 or 3.");
         }
-    }while(choice !=5);
+    }while(choice !=6);
          sc.close();
 
     }
