@@ -11,7 +11,7 @@ public class calculator{
 
         do{
             System.out.println("What Do You Want?");
-            System.out.println("1. Simple Calculation \n2. Squaring\n4. Exit");
+            System.out.println("1. Simple Calculation \n2. Squaring\n3. Exit");
                 choice = sc.nextInt();
         
 
