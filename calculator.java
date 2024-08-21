@@ -10,7 +10,7 @@ public class calculator{
      Scanner sc = new Scanner(System.in); //Adding scanner class for user input
 
         do{
-            System.out.println("What Do You Want?");
+            System.out.println("\nWhat Do You Want?");
             System.out.println("1. Simple Calculation \n2. Squaring\n3. Cubing\n4. Suare-root\n5. Cube-Root\n6. Exits");
                 choice = sc.nextInt();
         
